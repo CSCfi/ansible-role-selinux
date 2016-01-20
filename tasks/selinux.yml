@@ -1,4 +1,7 @@
 #### Selinux
+  - name: make sure libselinux-python is installed on EL
+    yum:  name=libselinux-python state=installed
+    when: ansible_os_family == "RedHat"
 
   - name: configure selinux
     selinux:  state={{ selinux_state }} policy={{ selinux_policy }}
