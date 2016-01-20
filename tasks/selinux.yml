@@ -6,6 +6,7 @@
   - name: configure selinux
     selinux:  state={{ selinux_state }} policy={{ selinux_policy }}
     register: selinuxchange
+    when: ansible_selinux.status is defined
 
   - name: restart machine in one minute if selinux was changed
     command: shutdown -r +1 now "Ansible updates triggered. Rebooting in under 1min"
