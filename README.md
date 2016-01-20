@@ -1,6 +1,7 @@
 ansible-role-selinux
 =========
 
+[![Build Status](https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-selinux.svg?branch=master)](https://travis-ci.org/CSC-IT-Center-for-Science/ansible-role-selinux)
 
 Requirements
 ------------
