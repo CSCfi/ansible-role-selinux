@@ -22,6 +22,6 @@
                   state=started
                   delay=90
                   timeout=300
-    sudo: false
+    become: false
     when: restartselinux.changed
 
