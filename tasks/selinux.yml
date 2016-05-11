@@ -16,6 +16,8 @@
     when: selinuxchange.changed
     register: restartselinux
 
+  - debug: var=restartselinux
+
   - name: if restart, wait min 90s(+300s) for server to come back after reboot
     local_action: wait_for host={{ inventory_hostname }}
                   port=22
