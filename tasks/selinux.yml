@@ -25,5 +25,5 @@
                   delay=90
                   timeout=300
     become: false
-    when: restartselinux.changed or restartselinux.skipped != True
+    when: restartselinux.changed or (restartselinux.skipped is defined and restartselinux.skipped != True) or (restartselinux.failed is defined and restartselinux.failed)
 
