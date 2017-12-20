@@ -1,5 +1,3 @@
 ---
 
-### The roles
-#
-  - include: selinux.yml
+  - include_tasks: selinux.yml
